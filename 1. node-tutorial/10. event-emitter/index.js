@@ -7,4 +7,4 @@ myFirstEmitter.on("greet", (name) => {
   console.log(`Hello ${name}`);
 });
 
-myFirstEmitter.emit("greet", "Sangam Mukherjee");
+myFirstEmitter.emit("greet", "Raunak Jha");

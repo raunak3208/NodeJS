@@ -17,4 +17,4 @@ myCustomEmitter.on("greeting", (input) => {
   console.log(`Greeting event`, input);
 });
 
-myCustomEmitter.greet("Sangam Mukherjee");
+myCustomEmitter.greet("Raunak Jha");

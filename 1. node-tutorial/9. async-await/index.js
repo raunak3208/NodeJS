@@ -7,7 +7,7 @@ async function delayedGreet(name) {
   console.log(name);
 }
 
-delayedGreet("Sangam");
+delayedGreet("Raunak");
 
 async function division(num1, num2) {
   try {
