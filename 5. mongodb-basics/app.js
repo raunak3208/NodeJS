@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 mongoose
   .connect(
-    "mongodb+srv://sangammukherjee2022:sangammukherjee2024@cluster0.7qjl1.mongodb.net/"
+    "mongodb+srv://raunakjha3208:raunakjha3208@cluster0.xwlh38u.mongodb.net/"
   )
   .then(() => console.log("database connected successfully"))
   .catch((e) => console.log(e));
@@ -23,20 +23,20 @@ async function runQueryExamples() {
   try {
     //create a new document
     const newUser = await User.create({
-      name: "Updated User",
-      email: "updated@gmail.com",
-      age: "75",
+      name: "Travis Doe",
+      email: "travis@gmail.com",
+      age: "55",
       isActive: true,
       tags: ["developer"],
     });
     // const newUser = new User({
-    //   name: "Raj Mukherjee",
-    //   email: "raj@gmail.com",
-    //   age: "40",
+    //   name: "John Doe",
+    //   email: "johndoe1@gmail.com",
+    //   age: "23",
     //   isActive: true,
-    //   tags: ["developer", "designer", "manager"],
+    //   tags: ["developer"],
     // });
-    // await newUser.save();
+    await newUser.save();
     console.log("Created new user", newUser);
     // const allUsers = await User.find({});
     // console.log(allUsers);
@@ -59,15 +59,15 @@ async function runQueryExamples() {
     // const deletedUser = await User.findByIdAndDelete(newUser._id);
     // console.log("deleted user ->", deletedUser);
 
-    const updateUser = await User.findByIdAndUpdate(
-      newUser._id,
-      {
-        $set: { age: 100 },
-        $push: { tags: "updated" },
-      },
-      { new: true }
-    );
-    console.log("updated user", updateUser);
+    // const updateUser = await User.findByIdAndUpdate(
+    //   newUser._id,
+    //   {
+    //     $set: { age: 100 },
+    //     $push: { tags: "updated" },
+    //   },
+    //   { new: true }
+    // );
+    // console.log("updated user", updateUser);
   } catch (e) {
     console.log("Error ->", e);
   } finally {
