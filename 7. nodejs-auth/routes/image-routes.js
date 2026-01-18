@@ -11,13 +11,7 @@ const {
 const router = express.Router();
 
 //upload the image
-router.post(
-  "/upload",
-  authMiddleware,
-  adminMiddleware,
-  uploadMiddleware.single("image"),
-  uploadImageController
-);
+router.post( "/upload",authMiddleware, adminMiddleware, uploadMiddleware.single("image"),uploadImageController);
 
 //to get all the images
 router.get("/get", authMiddleware, fetchImagesController);
